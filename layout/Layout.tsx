@@ -1,12 +1,19 @@
 import { NextPage } from "next";
+import Container from "../components/Container";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
-const Layout: NextPage = ({ children }) => {
+type LayoutProps = {
+  children: React.ReactNode;
+};
+
+const Layout = (props: LayoutProps) => {
   return (
-    <>
-      {/* Navbar */}
-      {children}
-      {/* Footer */}
-    </>
+    <Container>
+      <Header />
+      {props.children}
+      <Footer />
+    </Container>
   );
 };
 
