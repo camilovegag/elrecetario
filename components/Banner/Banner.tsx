@@ -1,7 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import styles from "./Banner.module.css";
 
-const Banner = () => {
-  return <article className={styles.banner}></article>;
+type BannerProps = {
+  image: string;
+};
+
+const Banner = ({ image }: BannerProps) => {
+  return (
+    <article className={styles.banner}>
+      <img src={image} alt="Banner image" />
+    </article>
+  );
 };
 
 export default Banner;
