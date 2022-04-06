@@ -1,7 +1,7 @@
 import { createClient } from "contentful";
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
-import Card from "../Components/Card";
+import Card from "../components/Card";
 
 export const getStaticProps = async () => {
   if (
