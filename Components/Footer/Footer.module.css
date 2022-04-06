@@ -1,7 +1,14 @@
 .footer {
   background: var(--grayFondo);
-  padding: 5px 0;
+  min-height: 48px;
 }
+
+.footer > div {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
 .footer h4 {
   color: var(--white);
   font-weight: 500;
