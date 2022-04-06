@@ -1,5 +1,4 @@
-import { NextPage } from "next";
-import Container from "../components/Container";
+import styles from "./Layout.module.css";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 
@@ -7,13 +6,13 @@ type LayoutProps = {
   children: React.ReactNode;
 };
 
-const Layout = (props: LayoutProps) => {
+const Layout = ({ children }: LayoutProps) => {
   return (
-    <Container>
+    <>
       <Header />
-      {props.children}
+      <div className={styles.container}>{children}</div>
       <Footer />
-    </Container>
+    </>
   );
 };
 
