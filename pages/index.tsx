@@ -2,6 +2,7 @@ import { createClient } from "contentful";
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
 import Card from "../components/Card";
+import { Recipe } from "../types/recipe";
 
 export const getStaticProps = async () => {
   if (
@@ -20,7 +21,7 @@ export const getStaticProps = async () => {
 
   return {
     props: {
-      recipes: response.items,
+      recipes: response.items as Recipe[],
     },
     revalidate: 60,
   };
@@ -35,7 +36,17 @@ const Home = ({ recipes }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>El recetario</h1>
-      <Card image="agsafasf" title="Pozole blanco" />
+      {recipes.map((recipe) => {
+        const { url } = recipe.fields.image.fields.file;
+
+        return (
+          <Card
+            key={recipe.sys.id}
+            title={recipe.fields.title}
+            image={`https:${url}`}
+          />
+        );
+      })}
     </div>
   );
 };
