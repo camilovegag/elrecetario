@@ -1,5 +1,5 @@
 import Link from "next/link";
-import styles from "../../styles/ItemList.module.css";
+import styles from "./ItemList.module.css";
 
 type ItemListProps = {
   name: string;
