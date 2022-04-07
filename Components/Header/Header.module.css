@@ -1,0 +1,10 @@
+.header {
+  background-color: var(--rojoFondo);
+  min-height: 48px;
+}
+
+.header,
+.header > div {
+  align-items: center;
+  display: flex;
+}

@@ -1,6 +1,6 @@
 import { useState } from "react";
-import styles from "../../styles/Drawer.module.css";
-import ItemList from "./ItemList";
+import styles from "./Drawer.module.css";
+import ItemList from "../ItemList";
 import Close from "../icons/Close";
 import Burger from "../icons/Burger";
 

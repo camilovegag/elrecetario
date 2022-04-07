@@ -42,3 +42,8 @@ img {
 *::before {
   box-sizing: border-box;
 }
+
+.constrains {
+  margin: 0 auto;
+  width: min(960px, 80%);
+}
