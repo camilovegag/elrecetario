@@ -33,10 +33,15 @@ a {
   text-decoration: none;
 }
 
+figure {
+  margin: 0;
+}
+
+
 img {
   width: 100%;
   max-width: 100%;
-  
+
 *,
 *::after,
 *::before {
