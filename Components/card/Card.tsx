@@ -2,14 +2,19 @@
 import React from "react";
 import styles from "./Card.module.css";
 
-const Card = ({ image, title }) => {
+type CardProps = {
+  image: string;
+  title: string;
+};
+
+const Card = ({ image, title }: CardProps) => {
   return (
     <div className={styles.recipeCard}>
       <figure>
-        <img src="/images.jpg" alt="Banner image" className={styles.image} />
+        <img src={image} alt="Banner image" className={styles.image} />
       </figure>
       <div className={styles.title}>
-        <h4>Title</h4>
+        <h4>{title}</h4>
       </div>
     </div>
   );
