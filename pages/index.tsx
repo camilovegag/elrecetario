@@ -1,6 +1,7 @@
 import { createClient } from "contentful";
 import type { InferGetStaticPropsType } from "next";
 import Head from "next/head";
+import Banner from "../components/Banner";
 import Card from "../components/Card";
 import { Recipe } from "../types/recipe";
 
@@ -36,6 +37,7 @@ const Home = ({ recipes }: InferGetStaticPropsType<typeof getStaticProps>) => {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <h1>El recetario</h1>
+      <Banner image="" />
       {recipes.map((recipe) => {
         const { url } = recipe.fields.image.fields.file;
 
