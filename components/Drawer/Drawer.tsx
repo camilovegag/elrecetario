@@ -1,8 +1,8 @@
 import { useState } from "react";
 import styles from "./Drawer.module.css";
 import ItemList from "../ItemList";
-import Close from "../icons/Close";
-import Burger from "../icons/Burger";
+import Close from "../Icons/Close";
+import Burger from "../Icons/Burger";
 
 type DrawerProps = {};
 const Drawer = (props: DrawerProps) => {
