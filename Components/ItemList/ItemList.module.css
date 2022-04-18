@@ -1,0 +1,12 @@
+.item {
+  border-bottom: solid #aaa 1px;
+}
+.link {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 5px;
+  color: var(--white);
+}
+.link:hover {
+  background-color: var(--titles);
+}
