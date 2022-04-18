@@ -1,6 +1,6 @@
-import styles from "./Layout.module.css";
-import Header from "../components/Header";
 import Footer from "../components/Footer";
+import Header from "../components/Header";
+import styles from "./Layout.module.css";
 
 type LayoutProps = {
   children: React.ReactNode;
@@ -9,7 +9,7 @@ type LayoutProps = {
 const Layout = ({ children }: LayoutProps) => {
   return (
     <>
-      <Header />
+      <Header title="El Recetario" />
       <div className={styles.container}>{children}</div>
       <Footer />
     </>
