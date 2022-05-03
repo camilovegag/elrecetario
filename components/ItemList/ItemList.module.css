@@ -1,11 +1,11 @@
 .item {
-  border-bottom: solid #aaa 1px;
+  border-bottom: solid #ddd 1px;
 }
 .link {
   display: inline-block;
   width: 100%;
   padding: 10px 5px;
-  color: var(--white);
+  color: #fff;
 }
 .link:hover {
   background-color: var(--titles);

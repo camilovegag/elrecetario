@@ -1,9 +1,10 @@
 import { createClient } from "contentful";
-import type { InferGetStaticPropsType } from "next";
-import Head from "next/head";
 import Banner from "../components/Banner";
-import Card from "../components/Card";
-import { Recipe } from "../types/recipe";
+import CardList from "../components/CardList";
+import Head from "next/head";
+import type { InferGetStaticPropsType } from "next";
+import type { Recipe } from "../types/recipe";
+import banner from "../assets/banner.png";
 
 export const getStaticProps = async () => {
   if (
@@ -30,25 +31,15 @@ export const getStaticProps = async () => {
 
 const Home = ({ recipes }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div>
+    <div className="layout">
       <Head>
         <title>El Recetario | Inicio</title>
         <meta name="description" content="Recetas para toda la familia" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <h1>El recetario</h1>
-      <Banner image="" />
-      {recipes.map((recipe) => {
-        const { url } = recipe.fields.image.fields.file;
-
-        return (
-          <Card
-            key={recipe.sys.id}
-            title={recipe.fields.title}
-            image={`https:${url}`}
-          />
-        );
-      })}
+      <Banner image={`${banner.src}`} />
+      <h2>Recetas</h2>
+      <CardList recipes={recipes} />
     </div>
   );
 };
