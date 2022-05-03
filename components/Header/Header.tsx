@@ -10,7 +10,7 @@ const Header = ({ title }: HeaderProps) => {
     <header className={styles.header}>
       <div className="constrains">
         <Drawer />
-        <h1>{title}</h1>
+        <h1 className={styles.title}>{title}</h1>
       </div>
     </header>
   );
