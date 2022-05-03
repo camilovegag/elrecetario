@@ -1,13 +1,10 @@
 import { createClient } from "contentful";
-import Banner from "../components/Banner";
-import CardList from "../components/CardList";
-import Head from "next/head";
 import type { InferGetStaticPropsType } from "next";
-import type { Recipe } from "../types/recipe";
+import Head from "next/head";
 import banner from "../assets/banner.png";
 import Banner from "../components/Banner";
-import Card from "../components/Card";
-import { Recipe } from "../types/recipe";
+import CardList from "../components/CardList";
+import type { Recipe } from "../types/recipe";
 
 export const getStaticProps = async () => {
   if (
