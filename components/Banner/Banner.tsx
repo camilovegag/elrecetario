@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { StaticImageData } from "next/image";
 import styles from "./Banner.module.css";
 
 type BannerProps = {
@@ -8,7 +9,7 @@ type BannerProps = {
 const Banner = ({ image }: BannerProps) => {
   return (
     <article className={styles.banner}>
-      <img src={image} alt="Banner image" />
+      <img className={styles.image} src={image} alt="Banner image" />
     </article>
   );
 };

@@ -1,5 +1,4 @@
 /* eslint-disable @next/next/no-img-element */
-import React from "react";
 import styles from "./Card.module.css";
 
 type CardProps = {
@@ -9,14 +8,12 @@ type CardProps = {
 
 const Card = ({ image, title }: CardProps) => {
   return (
-    <div className={styles.recipeCard}>
-      <figure>
-        <img src={image} alt="Banner image" className={styles.image} />
-      </figure>
-      <div className={styles.title}>
+    <article className={styles.card}>
+      <img className={styles.image} src={image} alt="Banner image" />
+      <section className={styles.title}>
         <h4>{title}</h4>
-      </div>
-    </div>
+      </section>
+    </article>
   );
 };
 
