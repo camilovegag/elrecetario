@@ -1,5 +1,5 @@
-import styles from "./Header.module.css";
 import Drawer from "../Drawer";
+import styles from "./Header.module.css";
 
 type HeaderProps = {
   title: string;
