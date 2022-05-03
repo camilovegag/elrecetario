@@ -43,7 +43,8 @@
 /*sidebar*/
 .aside {
   overflow-y: auto;
-  position: fixed;
+  position: absolute;
+  left: 0;
   top: 0px;
   height: 100vh;
   background-color: var(--clr-primary);
@@ -52,7 +53,7 @@
 }
 .aside > div {
   position: relative;
-  width: 250px;
+  width: 260px;
   height: 100%;
 }
 .open {
@@ -60,7 +61,7 @@
   margin-left: 0;
 }
 .closed {
-  margin-left: -250px;
+  margin-left: -260px;
 }
 .aside nav {
   margin-top: 1em;
