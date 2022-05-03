@@ -1,5 +1,13 @@
 .banner {
-  background-color: #ddd;
+  background-color: #fff;
   border-radius: 8px;
-  height: 200px;
+  height: 300px;
+  max-height: 50vw;
+  width: 100%;
+}
+
+.image {
+  border-radius: 8px;
+  height: 100%;
+  object-fit: cover;
 }
