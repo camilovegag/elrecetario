@@ -3,19 +3,22 @@
   width: 20px;
   height: 20px;
 }
+
 .toggleBtn,
 .closeBtn {
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #00000000;
   outline: none;
   border-radius: 5px;
   padding: 2px 8px;
   margin-left: 10px;
   border: none;
 }
+
 .toggleBtn:hover,
 .closeBtn:hover {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: #ffffff80;
 }
+
 .closeContainer {
   width: 100%;
   text-align: right;
@@ -43,13 +46,13 @@
   position: fixed;
   top: 0px;
   height: 100vh;
-  background-color: var(--sidebar);
+  background-color: var(--clr-primary);
   /* -webkit-box-shadow: 13px 1px 10px 1px rgba(0, 0, 0, 0.57);
   box-shadow: 13px 1px 10px 1px rgba(0, 0, 0, 0.57); */
 }
 .aside > div {
   position: relative;
-  width: 210px;
+  width: 250px;
   height: 100%;
 }
 .open {
@@ -57,7 +60,7 @@
   margin-left: 0;
 }
 .closed {
-  margin-left: -210px;
+  margin-left: -250px;
 }
 .aside nav {
   margin-top: 1em;
